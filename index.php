@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"  href="bootstrap/css/bootstrap.css"> 
+    <!-- <link rel=”stylesheet” href="assets\css\bootstrap.min.css"> -->
+    <script src="bootstrap/js/jquery.js"></script> 
+    <script src="bootstrap/js/popper.js"></script> 
+    <script src="bootstrap/js/bootstrap.js"></script>
 
 	<title>Perpustakaan</title>
-
-	<link rel="stylesheet" href="assets\css\bootstrap.css"> 
-	<!-- <link rel=”stylesheet” href="assets\css\bootstrap.min.css"> -->
-	<script src="assets/js/jquery.js"></script> 
-	<script src="assets/js/popper.js"></script> 
-	<script src="assets/js/bootstrap.js"></script>
 
 </head>
 <body>
