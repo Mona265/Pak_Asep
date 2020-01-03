@@ -1,4 +1,5 @@
 <?php
+include "koneksi.php";
 session_start();//session starts here
 
 ?> 
@@ -8,6 +9,7 @@ session_start();//session starts here
 <head>
     <title>Login </title>
     <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->  
     <link rel="icon" type="image/png" href="bootstrap-4.4.1-dist/images/icons/favicon.ico"/>
@@ -35,12 +37,21 @@ session_start();//session starts here
 <!--===============================================================================================-->
 </head>
 <body>
-    
+
+    <link rel="stylesheet" type="text/css"  href="bootstrap/css/bootstrap.css"> 
+    <!-- <link rel=”stylesheet” href="assets\css\bootstrap.min.css"> -->
+    <script src="bootstrap/js/jquery.js"></script> 
+    <script src="bootstrap/js/popper.js"></script> 
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+    <title>Login</title>
+
+
     <div class="limiter">
         <div class="container-login100">
             <div class="login100-more-login"></div>
 
-            <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+  <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
                 <form class="login100-form validate-form">
                     <span class="login100-form-title p-b-59">
                         Sign In

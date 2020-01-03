@@ -1,6 +1,7 @@
 <?php  
 
-	$koneksi = mysqli_connect('localhost','root','','db_spk_bimbel') or mysqli_error();
+
+	$koneksi = mysqli_connect('localhost','root','','kamu_bisa') or mysqli_error();
 
 	// check connection
 	if (mysqli_connect_errno()) {
