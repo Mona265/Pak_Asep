@@ -1,31 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"  href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet"  href="bootstrap/css/style.css"> 
+    <!-- <link rel=”stylesheet” href="assets\css\bootstrap.min.css"> -->
+    <script src="bootstrap/js/jquery.js"></script> 
+    <script src="bootstrap/js/popper.js"></script> 
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <style type="text/css">
+        .bg1 {
+          /* The image used */
+          background: url("bootstrap/image/anak4.jpg"), rgba(0,0,0,.5); color: white; ;
 
-	<title>Perpustakaan</title>
+          /* Full height */
+          height: 800px; 
+          margin: 0%;
 
-	<link rel="stylesheet" href="assets\css\bootstrap.css"> 
-	<!-- <link rel=”stylesheet” href="assets\css\bootstrap.min.css"> -->
-	<script src="assets/js/jquery.js"></script> 
-	<script src="assets/js/popper.js"></script> 
-	<script src="assets/js/bootstrap.js"></script>
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+        }
+    </style>
+    <style>
+        
+    </style>
+
+	<title>Kamu Bisa</title>
 
 </head>
 <body>
-  <header>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1>Welcome to My Web</h1>
-                    <div class="lead">Aku sedang belajar Bootstrap 4</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: url('bootstrap/image/anak4.jpg'); background-size: cover; position: relative;">
+        <span class="navbar-brand mb-0 h1"><h4><font color="black">Kamu Bisa</font></h4></span>
+    </nav>
+
+    <header>
+            <div class="bg1">
+                <div class="container1">
+                    <h1>Selamat Datang Di Kamu Bisa</h1>
+                    <h2>Ayo bantu saudara-saudara se-Indonesia dengan berdonasi di Kamu Bisa </h2>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-2">
+                          <button type="button" class="btn btn-warning"><b>Login Admin</b> </button>
+                        </div>
+                        <div class="col-lg-2">
+                          <button type="button" class="btn btn-warning"><b>Login Umum</b> </button>
+                        </div>
+                      </div>
+                    </div>
+                  
                 </div>
-            </div>
-        </div>
-    </div>
-  </header>
+            </div>  
+    </header>
 </body>
 </html>
