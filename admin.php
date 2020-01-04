@@ -3,49 +3,7 @@ include "koneksi.php";
 session_start();//session starts here
 ?> 
 
-<!-- 
-        <?php
-            if ($_SESSION["nilaiCaptcha"]!=$_POST ["nilaiCaptcha"]) {
-                echo "username anda ".$_POST["username"];echo "<br/>";
-                echo "password anda ".$_POST["pass"];echo "<br/>";
-                echo "Kode Captcha anda Salah";
-                }
-            else
-                {
-                echo "username anda ".$_POST["username"];echo "<br/>";
-                echo "password anda ".$_POST["pass"];echo "<br/>";
-                echo "Kode Captcha anda Benar";
-                }
-        ?>
 
-
-
-<?php require_once("koneksi.php"); ?>
-<script type="text/javascript" language="javascript">
-    var http = false;
-    if (window.XMLHttpRequest) {
-      http = new XMLHttpRequest();
-    } 
-
-    else if (window.ActiveXObject) {
-      http = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-
-    function login() {
-      http.responseText;
-      http.abort();
-      http.onreadystatechange=function() {
-        if (http.readyState == 4) {
-          document.getElementById('pesan').innerHTML = this.responseText;
-        }
-      }
-      var user=document.getElementById('username').value;
-      var pwd = document.getElementById('pass').value;
-      http.open("GET", "http://localhost/Pak_Asep/LoginProses.php?u="+username+"&p="+pass, true);
-      http.send(null);
-    }
-  </script>
- -->
 
 
 <!DOCTYPE html>
@@ -88,21 +46,20 @@ session_start();//session starts here
     <script src="bootstrap/js/popper.js"></script> 
     <script src="bootstrap/js/bootstrap.js"></script>
 
-    <title>Login</title>
+    <title>Login Admin</title>
 
 
     <div class="limiter">
-    <form method="post" action="LoginProses.php">
+    <form method="post" action="AdminProses.php">
         <div class="container-login100">
             <div class="login100-more-login"></div>
             <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
                 <div class="p-l-50 p-r-50 p-t-50 p-b-50">
                     
                 </div>
-
                 <form class="login100-form validate-form">
                     <span class="login100-form-title p-b-59">
-                        Sign In
+                        Sign In Admin
                     </span>
 
                    
@@ -118,21 +75,7 @@ session_start();//session starts here
                         <span class="focus-input100"></span>
                     </div>
 
-                     <div class="wrap-input100 validate-input" data-validate="Username is required">
-                        <span class="label-input100">Captcha</span>
-                        <img src="gambarcaptcha.php" alt="gambar">
-                        <span class="focus-input100"></span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input" data-validate="Username is required">
-                        <span class="label-input100">Isikan Captcha</span>
-                        <input class="input100" type="text" name="nilaiCaptcha" value="" maxlength="6" required>
-                        <span class="focus-input100"></span>
-                    </div>
-
-
                     
-
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
@@ -141,10 +84,7 @@ session_start();//session starts here
                             </button>
                         </div>
 
-                        <a href="Registrasi.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
-                            Daftar
-                            <i class="fa fa-long-arrow-right m-l-5"></i>
-                        </a>
+                        
                     </div>
 
                     <div class="container-login100-form-btn p-t-50">
