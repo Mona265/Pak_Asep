@@ -1,3 +1,32 @@
+<?php require_once("koneksi.php"); ?>
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" language="javascript">
+    var http = false;
+    if (window.XMLHttpRequest) {
+      http = new XMLHttpRequest();
+    } 
+
+    else if (window.ActiveXObject) {
+      http = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    function login() {
+      http.responseText;
+      http.abort();
+      http.onreadystatechange=function() {
+        if (http.readyState == 4) {
+          document.getElementById('pesan').innerHTML = this.responseText;
+        }
+      }
+      var user=document.getElementById('username').value;
+      var pwd = document.getElementById('password').value;
+      http.open("GET", "http://localhost/Pak_Asep/LoginProses.php?u="+username+"&p="+password, true);
+      http.send(null);
+    }
+  </script>
+
 <?php
 include "koneksi.php";
 session_start();//session starts here
@@ -76,7 +105,7 @@ session_start();//session starts here
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
                             <button class="login100-form-btn" >
-                            <a href="index.php">Sign In</a> 
+                            <a href="LoginProses.php">Sign In</a> 
                             </button>
                         </div>
 
