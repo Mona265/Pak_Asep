@@ -70,18 +70,7 @@ include 'koneksi.php';
                         <span class="focus-input100"></span>
                     </div>
 
-                    <div class="wrap-input100 validate-input" data-validate="Username is required">
-                        <span class="label-input100">Captcha</span>
-                        <img src="gambarcaptcha.php" alt="gambar">
-                        <span class="focus-input100"></span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input" data-validate="Username is required">
-                        <span class="label-input100">Isikan Captcha</span>
-                        <input class="input100" type="text" name="nilaiCaptcha" value="" maxlength="6" required>
-                        <span class="focus-input100"></span>
-                    </div>
-
+                   
 
                     
 
