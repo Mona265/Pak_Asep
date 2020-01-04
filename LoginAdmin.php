@@ -36,7 +36,7 @@ session_start();//session starts here
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login </title>
+    <title>Login Admin -Kamu Bisa-</title>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -79,13 +79,12 @@ session_start();//session starts here
     <div class="limiter">
         <div class="container-login100">
             <div class="login100-more-login"></div>
-            <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-                <div class="p-l-50 p-r-50 p-t-50 p-b-50">
-                    
-                </div>
+
+  <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
                 <form class="login100-form validate-form">
                     <span class="login100-form-title p-b-59">
-                        Sign In
+                        Sign In <br>
+                        <h4>Admin</h4>
                     </span>
 
                    
@@ -110,18 +109,11 @@ session_start();//session starts here
                             <a href="LoginProses.php">Sign In</a> 
                             </button>
                         </div>
-
-                        <a href="Registrasi.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
-                            Daftar
-                            <i class="fa fa-long-arrow-right m-l-5"></i>
-                        </a>
                     </div>
 
                     <div class="container-login100-form-btn p-t-50">
                         <a href="index.php" class="badge badge-warning">Kembali</a>
                     </div>
-
-                    
                 </form>
             </div>
         </div>

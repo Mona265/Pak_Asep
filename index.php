@@ -47,10 +47,11 @@
                       <div class="row">
                         <div class="col-lg-4"></div>
                         <div class="col-lg-2">
-                          <button type="button" class="btn btn-warning"><b>Login Admin</b> </button>
+                          <a href="Login.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login Umum</a>
+                          <!-- <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a> -->
                         </div>
                         <div class="col-lg-2">
-                          <button type="button" class="btn btn-warning"><b>Login Umum</b> </button>
+                          <a href="LoginAdmin.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login Admin</a>
                         </div>
                       </div>
                     </div>
