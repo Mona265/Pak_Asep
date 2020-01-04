@@ -1,6 +1,6 @@
 <?php
 session_start();//session starts here
-
+include 'koneksi.php';
 ?> 
 
 <!DOCTYPE html>
@@ -70,6 +70,19 @@ session_start();//session starts here
                         <span class="focus-input100"></span>
                     </div>
 
+                    <div class="wrap-input100 validate-input" data-validate="Username is required">
+                        <span class="label-input100">Captcha</span>
+                        <img src="gambarcaptcha.php" alt="gambar">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Username is required">
+                        <span class="label-input100">Isikan Captcha</span>
+                        <input class="input100" type="text" name="nilaiCaptcha" value="" maxlength="6" required>
+                        <span class="focus-input100"></span>
+                    </div>
+
+
                     
 
                     <div class="flex-m w-full p-b-33">
@@ -83,17 +96,19 @@ session_start();//session starts here
                                     </a>
                                 </span>
                             </label>
-                        </div>
-
-                        
+                        </div>                        
                     </div>
+
+                    
 
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
-                            <button class="login100-form-btn">
-                                Sign Up
-                            </button>
+                            <a href="loginProses.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+                            Sign up
+                            <i class="fa fa-long-arrow-right m-l-5"></i>
+                        </a>
+                            
                         </div>
 
                         <a href="Login.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">

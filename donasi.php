@@ -57,7 +57,7 @@ include 'koneksi.php';
             
             <td>
                 <a href="editdonasi.php?id=<?php echo $d['id']; ?>">EDIT</a>
-                <a href="delete.php?id=<?php echo $d['id']; ?> ">HAPUS</a>
+                <a href="delete.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Hapus Data?');">HAPUS</a>
             </td>
         </tr>
         <?php
