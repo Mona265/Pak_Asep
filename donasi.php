@@ -25,14 +25,17 @@ include 'koneksi.php';
     </div>
   </nav>
   
-  <div class="container" style="margin-top: 20px">
+  <div class="container" >
+  <div class="row" style="margin-top: 20px"></div>
+  <div class="col-md-2"></div>
+  <div class="col-md-14">
  
     <h2>Daftar Donasi</h2>
     
     <hr>
     
     <table class="table table-striped table-hover table-sm table-bordered">
-     <div class="col-md-2 offset-md-10">
+     <div class="col-md-2"></div>
       <thead class="thead-dark">
         <tr>
           <th scope="col" width="20">No</th>
@@ -61,7 +64,7 @@ include 'koneksi.php';
             <td><?php echo $d['penerima_donasi']; ?></td>
             <td><?php echo $d['total_dana']; ?></td>
             <td><?php echo $d['deskripsi']; ?></td>
-            <td><?php echo $d['dana_terkumpul']; ?></td
+            <td><?php echo $d['dana_terkumpul']; ?></td>
             
             <td>
                 <a href="editdonasi.php?id=<?php echo $d['id']; ?>">EDIT</a>
