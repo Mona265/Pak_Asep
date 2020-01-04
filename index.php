@@ -50,7 +50,7 @@
                           <a href="Login.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login Umum</a>
                         </div>
                         <div class="col-lg-2">
-                          <a href="LoginAdmin.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login Admin</a>
+                          <a href="Admin.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login Admin</a>
                         </div>
                       </div>
                     </div>
