@@ -13,7 +13,7 @@
     <style type="text/css">
         .bg1 {
           /* The image used */
-          background: url("bootstrap-4.4.1-dist/image/anak4.jpg"), rgba(0,0,0,.5); color: white; ;
+          background: url("bootstrap/image/anak4.jpg"), rgba(0,0,0,.5); color: white; ;
 
           /* Full height */
           height: 800px; 
@@ -34,7 +34,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: url('bootstrap-4.4.1-dist/image/anak4.jpg'); background-size: cover; position: relative;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: url('bootstrap/image/anak4.jpg'); background-size: cover; position: relative;">
         <span class="navbar-brand mb-0 h1"><h4><font color="black">Kamu Bisa</font></h4></span>
     </nav>
 
