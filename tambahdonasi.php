@@ -18,21 +18,28 @@
       <label for="nama">Nama :</label>
       <input type="text" class="form-control" placeholder="Masukan nama" name="nama">
     </div>
-    <div class="form-group">
-    <label for="exampleFormControlSelect1">Kategori</label>
-    <select class="form-control" id="exampleFormControlSelect1" name="kategori">
-      <option>-</option>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+
+     <div class="form-group">
+      <label for="nama">Nama Penerima :</label>
+      <input type="text" class="form-control" placeholder="Masukan nama" name="penerima_donasi">
     </div>
+
+     <div class="form-group">
+      <label for="nama">Jumlah Dana Yang DIbutuhkan :</label>
+      <input type="text" class="form-control" placeholder="Masukan nama" name="total_dana">
+    </div>
+
+
+    
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Deskripsi :</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="deskripsi"></textarea>
   </div>
+
+   <div class="form-group">
+      <label for="nama">Dana Terkumpul :</label>
+      <input type="text" class="form-control" placeholder="Masukan nama" name="dana_terkumpul">
+    </div>
 
   <button type="submit"onclick="return confirm('Simpan Data?');">Tambah</button>
   <form action="tampildata.php">

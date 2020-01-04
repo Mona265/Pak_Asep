@@ -25,21 +25,27 @@ include 'koneksi.php';
     </div>
   </nav>
   
-  <div class="container" style="margin-top:20px">
+  <div class="container" style="margin-top: 20px">
+ 
     <h2>Daftar Donasi</h2>
     
     <hr>
     
     <table class="table table-striped table-hover table-sm table-bordered">
+     <div class="col-md-2 offset-md-10">
       <thead class="thead-dark">
         <tr>
           <th scope="col" width="20">No</th>
           <th scope="col" width="20">Nama</th>
-          <th scope="col" width="20">Kategori</th>
+          <th scope="col" width="20">Penerima Donasi</th>
+          <th scope="col" width="20">Jumlah Dana </th>
           <th scope="col" width="20">Deskripsi</th>
+          <th scope="col" width="20">Dana Terkumpul</th>
           <th scope="col" width="10"></th>
         </tr>
       </thead>
+      </div>
+
 
       <tbody>
        
@@ -52,8 +58,10 @@ include 'koneksi.php';
         <tr>
             <td><?php echo $nomer++; ?></td>
             <td><?php echo $d['nama']; ?></td>
-            <td><?php echo $d['kategori']; ?></td>
+            <td><?php echo $d['penerima_donasi']; ?></td>
+            <td><?php echo $d['total_dana']; ?></td>
             <td><?php echo $d['deskripsi']; ?></td>
+            <td><?php echo $d['dana_terkumpul']; ?></td
             
             <td>
                 <a href="editdonasi.php?id=<?php echo $d['id']; ?>">EDIT</a>
@@ -66,8 +74,9 @@ include 'koneksi.php';
 
       <tbody>
     </table>
-    
+    </div>
   </div>
+
   
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

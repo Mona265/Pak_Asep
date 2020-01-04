@@ -20,5 +20,5 @@ if ($_SESSION["Captcha"]!=$_POST ["nilaiCaptcha"]) {
 	echo "Kode Captcha anda Benar";
 	}
 
- header("location:index.php");
+ header("location:donasi.php");
 ?>

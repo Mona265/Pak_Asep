@@ -146,7 +146,7 @@ session_start();//session starts here
                     </div>
 
                     <div class="container-login100-form-btn p-t-50">
-                        <a href="index.php" class="badge badge-warning">Kembali</a>
+                        <a href="donasi.php" class="badge badge-warning">Kembali</a>
                     </div>
 
                     
