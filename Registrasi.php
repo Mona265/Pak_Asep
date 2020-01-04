@@ -104,6 +104,11 @@ include 'koneksi.php';
                             <i class="fa fa-long-arrow-right m-l-5"></i>
                         </a>
                     </div>
+
+                    <div class="container-login100-form-btn p-t-50">
+                        <a href="index.php" class="badge badge-warning">Kembali</a>
+                    </div>
+
                 </form>
             </div>
         </div>
