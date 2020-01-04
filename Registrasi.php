@@ -1,5 +1,5 @@
 <?php
-session_start();//session starts here
+// session_start();//session starts here
 include 'koneksi.php';
 ?> 
 
@@ -48,20 +48,20 @@ include 'koneksi.php';
             
                     <div class="wrap-input100 validate-input" data-validate="Name is required">
                         <span class="label-input100">Full Name</span>
-                        <input class="input100" type="text"  placeholder="Name..." name="name">
+                        <input class="input100" type="text"  placeholder="Name..." name="nama">
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
                         <span class="label-input100">Email</span>
-                        <input class="input100" type="text"  placeholder="Email addess..." name="email">
+                        <input class="input100" type="text"  placeholder="Email addess..." name="email" >
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Username is required">
                         <span class="label-input100">Username</span>
                         <input class="input100" type="text"  placeholder="Username..." name="username">
-                        <span class="focus-input100"></span>
+                        <span class="focus-input100"></span> 
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate = "Password is required">
@@ -106,8 +106,7 @@ include 'koneksi.php';
                             <div class="login100-form-bgbtn"></div>
 
                             <button class="login100-form-btn">
-
-                            <a href="RegistrasiProses.php">Sign Up</a>   
+                            Sign Up
                             </button>
                         </div>
 
