@@ -1,26 +1,7 @@
-<?php
-include "koneksi.php";
-session_start();//session starts here
-?> 
-
-<!-- 
-        <?php
-            if ($_SESSION["nilaiCaptcha"]!=$_POST ["nilaiCaptcha"]) {
-                echo "username anda ".$_POST["username"];echo "<br/>";
-                echo "password anda ".$_POST["pass"];echo "<br/>";
-                echo "Kode Captcha anda Salah";
-                }
-            else
-                {
-                echo "username anda ".$_POST["username"];echo "<br/>";
-                echo "password anda ".$_POST["pass"];echo "<br/>";
-                echo "Kode Captcha anda Benar";
-                }
-        ?>
-
-
-
 <?php require_once("koneksi.php"); ?>
+<!DOCTYPE html>
+<html>
+<head>
 <script type="text/javascript" language="javascript">
     var http = false;
     if (window.XMLHttpRequest) {
@@ -40,18 +21,22 @@ session_start();//session starts here
         }
       }
       var user=document.getElementById('username').value;
-      var pwd = document.getElementById('pass').value;
-      http.open("GET", "http://localhost/Pak_Asep/LoginProses.php?u="+username+"&p="+pass, true);
+      var pwd = document.getElementById('password').value;
+      http.open("GET", "http://localhost/Pak_Asep/LoginProses.php?u="+username+"&p="+password, true);
       http.send(null);
     }
   </script>
- -->
 
+<?php
+include "koneksi.php";
+session_start();//session starts here
+
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login </title>
+    <title>Login Admin -Kamu Bisa-</title>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -94,13 +79,12 @@ session_start();//session starts here
     <div class="limiter">
         <div class="container-login100">
             <div class="login100-more-login"></div>
-            <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-                <div class="p-l-50 p-r-50 p-t-50 p-b-50">
-                    
-                </div>
+
+  <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
                 <form class="login100-form validate-form">
                     <span class="login100-form-title p-b-59">
-                        Sign In
+                        Sign In <br>
+                        <h4>Admin</h4>
                     </span>
 
                    
@@ -116,19 +100,6 @@ session_start();//session starts here
                         <span class="focus-input100"></span>
                     </div>
 
-                     <div class="wrap-input100 validate-input" data-validate="Username is required">
-                        <span class="label-input100">Captcha</span>
-                        <img src="gambarcaptcha.php" alt="gambar">
-                        <span class="focus-input100"></span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input" data-validate="Username is required">
-                        <span class="label-input100">Isikan Captcha</span>
-                        <input class="input100" type="text" name="nilaiCaptcha" value="" maxlength="6" required>
-                        <span class="focus-input100"></span>
-                    </div>
-
-
                     
 
                     <div class="container-login100-form-btn">
@@ -138,18 +109,11 @@ session_start();//session starts here
                             <a href="LoginProses.php">Sign In</a> 
                             </button>
                         </div>
-
-                        <a href="Registrasi.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
-                            Daftar
-                            <i class="fa fa-long-arrow-right m-l-5"></i>
-                        </a>
                     </div>
 
                     <div class="container-login100-form-btn p-t-50">
                         <a href="index.php" class="badge badge-warning">Kembali</a>
                     </div>
-
-                    
                 </form>
             </div>
         </div>
