@@ -52,7 +52,7 @@ session_start();//session starts here
     <div class="limiter">
     <form method="post" action="AdminProses.php">
         <div class="container-login100">
-            <div class="login100-more-login"></div>
+            <div class="login100-more-admin"></div>
             <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
                 <div class="p-l-50 p-r-50 p-t-50 p-b-50">
                     
