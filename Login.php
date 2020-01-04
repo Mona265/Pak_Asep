@@ -1,7 +1,26 @@
+<?php
+include "koneksi.php";
+session_start();//session starts here
+?> 
+
+<!-- 
+        <?php
+            if ($_SESSION["nilaiCaptcha"]!=$_POST ["nilaiCaptcha"]) {
+                echo "username anda ".$_POST["username"];echo "<br/>";
+                echo "password anda ".$_POST["pass"];echo "<br/>";
+                echo "Kode Captcha anda Salah";
+                }
+            else
+                {
+                echo "username anda ".$_POST["username"];echo "<br/>";
+                echo "password anda ".$_POST["pass"];echo "<br/>";
+                echo "Kode Captcha anda Benar";
+                }
+        ?>
+
+
+
 <?php require_once("koneksi.php"); ?>
-<!DOCTYPE html>
-<html>
-<head>
 <script type="text/javascript" language="javascript">
     var http = false;
     if (window.XMLHttpRequest) {
@@ -21,17 +40,13 @@
         }
       }
       var user=document.getElementById('username').value;
-      var pwd = document.getElementById('password').value;
-      http.open("GET", "http://localhost/Pak_Asep/LoginProses.php?u="+username+"&p="+password, true);
+      var pwd = document.getElementById('pass').value;
+      http.open("GET", "http://localhost/Pak_Asep/LoginProses.php?u="+username+"&p="+pass, true);
       http.send(null);
     }
   </script>
+ -->
 
-<?php
-include "koneksi.php";
-session_start();//session starts here
-
-?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -100,6 +115,19 @@ session_start();//session starts here
                         <input class="input100" type="text" name="pass" placeholder="*************">
                         <span class="focus-input100"></span>
                     </div>
+
+                     <div class="wrap-input100 validate-input" data-validate="Username is required">
+                        <span class="label-input100">Captcha</span>
+                        <img src="gambarcaptcha.php" alt="gambar">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Username is required">
+                        <span class="label-input100">Isikan Captcha</span>
+                        <input class="input100" type="text" name="nilaiCaptcha" value="" maxlength="6" required>
+                        <span class="focus-input100"></span>
+                    </div>
+
 
                     
 
