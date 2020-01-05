@@ -48,7 +48,7 @@ while ($d = mysqli_fetch_array($data)) {
 
    <div class="form-group">
       <label for="nama">Dana Terkumpul :</label>
-      <input type="text" class="form-control" placeholder="Masukan nama" name="dana_terkumpul" value="<?php echo $d['dana_terkumpul']; ?>">
+      <input type="number" class="form-control" placeholder="Masukan nama" name="dana_terkumpul" value="<?php echo $d['dana_terkumpul']; ?>">
     </div>
 
    

@@ -42,11 +42,8 @@
     </div>
 
   <button type="submit"onclick="return confirm('Simpan Data?');">Tambah</button>
-  <form action="tampildata.php">
-    <button type="submit" onclick="return confirm('Yakin batal?');">Batal</button>
-  </form> 
+  
 </form>
-
 </div>
 
 </body>
