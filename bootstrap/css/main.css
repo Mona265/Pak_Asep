@@ -222,6 +222,17 @@ iframe {
   
 }
 
+.login100-more-admin {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: calc(100% - 520px);
+  position: relative;
+  z-index: 1;
+  background-image: url('../image/6.jpg');
+  
+}
+
 .login100-more::before {
   content: "";
   display: block;

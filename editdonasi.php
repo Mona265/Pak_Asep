@@ -33,12 +33,12 @@ while ($d = mysqli_fetch_array($data)) {
 
      <div class="form-group">
       <label for="nama">Nama Penerima :</label>
-      <input type="text" class="form-control" placeholder="Masukan nama" name="penerima_donasi" value="<?php echo $d['penerima_donasi']; ?>">
+      <input type="text" class="form-control" placeholder="Masukan nama Penerima" name="penerima_donasi" value="<?php echo $d['penerima_donasi']; ?>">
     </div>
 
      <div class="form-group">
       <label for="nama">Jumlah Dana Yang DIbutuhkan :</label>
-      <input type="text" class="form-control" placeholder="Masukan nama" name="total_dana" value="<?php echo $d['total_dana']; ?>">
+      <input type="text" class="form-control" placeholder="Masukan Jumlah Dana" name="total_dana" value="<?php echo $d['total_dana']; ?>">
     </div>
 
   <div class="form-group">
@@ -49,6 +49,7 @@ while ($d = mysqli_fetch_array($data)) {
    <div class="form-group">
       <label for="nama">Dana Terkumpul :</label>
       <input type="number" class="form-control" placeholder="Masukan nama" name="dana_terkumpul" value="<?php echo $d['dana_terkumpul']; ?>">
+      <input type="text" class="form-control" placeholder="Dana Terkumpul" name="dana_terkumpul" value="<?php echo $d['dana_terkumpul']; ?>">
     </div>
 
    
