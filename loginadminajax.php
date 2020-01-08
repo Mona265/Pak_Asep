@@ -1,18 +1,14 @@
 <?php
-include'koneksi.php';
-session_start(); 
+require_once("koneksi.php"); 
+$username=$_GET['u'];
+$pass=$_GET["p"];
+$query= "SELECT * FROM tb_admin WHERE username='$username' AND pass='$pass' ";
+$hasil = mysqli_query($koneksi, $query);
 
-$username = $_POST['username'];
- $pass = $_POST['pass'];
+if (mysqli_num_rows($hasil) > 0){
+	  header("location:donasi.php");
+} else {
+	 echo "Ditolak";
+}
 
- $_SESSION["username"] = $username;
- $_SESSION["pass"] = $pass;
-
- $query= "SELECT * FROM tb_admin WHERE username='$username' AND pass='$pass' ";
- $hasil = mysqli_query($koneksi, $query);
- 
-
-  header("location:donasi.php");
-
- 
 ?>

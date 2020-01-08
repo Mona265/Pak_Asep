@@ -1,8 +1,5 @@
-<?php
-include "koneksi.php";
-session_start();//session starts here
+<?php require_once("koneksi.php"); ?>
 
-?> 
 
 <!DOCTYPE html>
 <html>
@@ -31,7 +28,6 @@ session_start();//session starts here
       http.send(null);
     }
   </script> -->
-
 
 
 <!DOCTYPE html>
@@ -76,13 +72,14 @@ session_start();//session starts here
 
     <title>Login</title>
 
-
-    <div class="limiter">
+    <div id="info"></div>
+    <div class="limiter" id="pesan">
+    <form>
         <div class="container-login100">
             <div class="login100-more-login"></div>
 
   <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-                <form class="login100-form validate-form">
+                <form class="login100-form">
                     <span class="login100-form-title p-b-59">
                         Sign In <br>
                         <h4>Admin</h4>
@@ -91,13 +88,13 @@ session_start();//session starts here
                    
                     <div class="wrap-input100 validate-input" data-validate="Username is required">
                         <span class="label-input100">Username</span>
-                        <input class="input100" type="text" name="username" placeholder="Username...">
+                        <input class="input100" type="text" id="username" name="username" placeholder="Username...">
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate = "Password is required">
                         <span class="label-input100">Password</span>
-                        <input class="input100" type="password" name="pass" placeholder="*************">
+                        <input class="input100" type="password" id="password"  name="pass" placeholder="*************">
                         <span class="focus-input100"></span>
                     </div>
 
@@ -106,8 +103,8 @@ session_start();//session starts here
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
-                            <button class="login100-form-btn" >
-                            <a href="loginadminajax.php">Sign In</a> 
+                            <button class="login100-form-btn" type="button" onclick="login();" >
+                            Sign In
                             </button>
                         </div>
                     </div>
@@ -136,6 +133,44 @@ session_start();//session starts here
     <script src="bootstrap-4.4.1-dist/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
     <script src="bootstrap-4.4.1-dist/js/main.js"></script>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+
+<script type="text/javascript" language="javascript">
+    var http = false;
+    if (window.XMLHttpRequest) {
+      http = new XMLHttpRequest();
+    } 
+
+    else if (window.ActiveXObject) {
+      http = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    function login() {
+      http.responseText;
+      http.abort();
+      http.onreadystatechange=function() {
+        if (http.readyState == 4) {
+            var response = this.responseText;
+
+            if(response == "Ditolak"){
+                 document.getElementById("info").innerHTML = this.responseText;
+            }else{
+                document.getElementById("pesan").innerHTML = this.responseText;
+                document.getElementById("info").innerHTML = "";
+            }
+        }
+      }
+      var username=document.getElementById('username').value;
+      var pass = document.getElementById('password').value;
+      http.open("GET", "http://localhost/Pak_Asep/loginadminajax.php?u="+username+"&p="+pass, true);
+      http.send();
+    }
+  </script>
+
+</body>
+</html>
 
 </body>
 </html>
