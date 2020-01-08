@@ -1,7 +1,8 @@
 <?php
-
 include 'koneksi.php';
+session_start();
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,17 +48,21 @@ include 'koneksi.php';
        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
               <ul class="nav navbar-nav menu_nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li> 
-                <li class="nav-item"><a class="nav-link" href="tambahdonasi.php">Tambah</a></li> 
+                <li class="nav-item"><a class="nav-link" href="tambahdonasi.php">Tambah</a></li>
+                <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>  
             </div>
     </div>
   </nav>
-  
+
+
   <div class="container" >
   <div class="row" style="margin-top: 20px"></div>
   <div class="col-md-2"></div>
   <div class="col-md-14">
  
     <h2>Daftar Donasi</h2>
+  <h1><?php00=@$_SESSION['nama_user'];?></h1>
+
     
     <table class="table table-striped table-hover table-sm table-bordered">
      <div class="col-md-2"></div>

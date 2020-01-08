@@ -100,7 +100,11 @@ session_start();//session starts here
                     
                 </div>
 
+                <form class="login100-form validate-form" method="post" action="LoginProses.php">
+
+
                 <form class="login100-form validate-form">
+
                     <span class="login100-form-title p-b-59">
                         Sign In
                     </span>
@@ -130,13 +134,14 @@ session_start();//session starts here
                         <span class="focus-input100"></span>
                     </div>
 
-
-                    
-
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
+<<<<<<< HEAD
+                            <button class="login100-form-btn" type="submit" name="login" >
+=======
                             <button class="login100-form-btn" >
+>>>>>>> 4fc7a486129e959385165a5ad4fdb20da7446f81
                             Sign In
                             </button>
                         </div>
@@ -147,9 +152,13 @@ session_start();//session starts here
                         </a>
                     </div>
 
+<<<<<<< HEAD
+                    
+=======
                     <div class="container-login100-form-btn p-t-50">
                         <a href="index.php" class="badge badge-warning">Kembali</a>
                     </div>
+>>>>>>> 4fc7a486129e959385165a5ad4fdb20da7446f81
 
                     
                 </form>
