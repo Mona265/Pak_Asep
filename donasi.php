@@ -73,7 +73,7 @@ $row     = mysqli_fetch_array($result);
   <div class="col-md-14">
  
     <h2>Daftar Donasi</h2>
-  <h1><?php00=@$_SESSION['nama_user'];?></h1>
+ 
 
     
     <table class="table table-striped table-hover table-sm table-bordered">
@@ -114,7 +114,7 @@ $row     = mysqli_fetch_array($result);
 
                 <a href="editdonasi.php?id=<?php echo $d['id']; ?>">EDIT</a>
                 <a href="delete.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Hapus Data?');">HAPUS</a>
-                <a href="donatur.php">Donasi</a>
+                <a href="donatur.php?id=<?php echo $d['id']; ?>">Donasi</a>
             </td>
         </tr>
         <?php

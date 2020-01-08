@@ -20,10 +20,20 @@ $username = $_SESSION['user'];
   <h2>Form Data Donatur</h2>
   <form method="post" action="DonaturProses.php">
 
-  <div class="form-group">
-      <label for="nama">Id Donasi:</label>
-      <input type="text" class="form-control" placeholder="Masukan jumlah donasi" name="id">
-    </div>
+   <?php  
+   include 'koneksi.php';                 
+   $id = $_GET['id'];
+   $data = mysqli_query($koneksi, "select * from tb_donasi where id='$id'");
+   while ($d = mysqli_fetch_array($data)) {
+  ?>
+
+  <!-- <fieldset disabled> -->
+    <div class="form-group">
+        <label for="nama">Id Donasi:</label>
+        <input type="text" class="form-control" value="<?php echo $d['id']; ?>" name="id">
+      </div>
+    </fieldset>
+  <?php } ?>
 
   <fieldset disabled>
     <div class="form-group">
@@ -39,9 +49,7 @@ $username = $_SESSION['user'];
 
 
   <button type="submit"onclick="return confirm('Simpan Data?');">Simpan</button>
-  <form action="DonaturProses.php">
-    <button type="submit" onclick="return confirm('Yakin batal?');">Batal</button>
-  </form> 
+  <button type="button" onclick="window.location.href='donasi.php';">Batal</button>
 </form>
 
 </div>
