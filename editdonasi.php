@@ -30,21 +30,27 @@ while ($d = mysqli_fetch_array($data)) {
       <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
       <input type="text" class="form-control" placeholder="Masukan nama" name="nama" value="<?php echo $d['nama']; ?>">
     </div>
-<div class="form-group">
-    <label for="exampleFormControlSelect1">Kategori</label>
-    <select class="form-control" id="exampleFormControlSelect1" name="kategori" value="<?php echo $d['kategori']; ?>">
-      <option>-</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
+
+     <div class="form-group">
+      <label for="nama">Nama Penerima :</label>
+      <input type="text" class="form-control" placeholder="Masukan nama Penerima" name="penerima_donasi" value="<?php echo $d['penerima_donasi']; ?>">
     </div>
+
+     <div class="form-group">
+      <label for="nama">Jumlah Dana Yang DIbutuhkan :</label>
+      <input type="text" class="form-control" placeholder="Masukan Jumlah Dana" name="total_dana" value="<?php echo $d['total_dana']; ?>">
+    </div>
+
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Deskripsi :</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="deskripsi"><?php echo $d['deskripsi']; ?></textarea>
   </div>
+
+   <div class="form-group">
+      <label for="nama">Dana Terkumpul :</label>
+      <input type="text" class="form-control" placeholder="Dana Terkumpul" name="dana_terkumpul" value="<?php echo $d['dana_terkumpul']; ?>">
+    </div>
+
    
   <button type="submit"onclick="return confirm('Simpan Data?');">Simpan</button>
       <form action="tampildata.php">

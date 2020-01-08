@@ -45,13 +45,18 @@
                     <h2>Ayo bantu saudara-saudara se-Indonesia dengan berdonasi di Kamu Bisa </h2>
                     <div class="container">
                       <div class="row">
-                        <div class="col-lg-4"></div>
+                        <div class="col-lg-3"></div>
                         <div class="col-lg-2">
                           <a href="Login.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login Umum</a>
                         </div>
                         <div class="col-lg-2">
-                          <a href="LoginAdmin.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login Admin</a>
+                          <a href="Admin.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login Admin</a>
                         </div>
+
+                         <div class="col-lg-2">
+                          <a href="ReadAbout.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">About Us</a>
+                        </div>
+
                       </div>
                     </div>
                   
