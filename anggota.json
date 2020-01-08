@@ -1,23 +1,8 @@
 [
     {
-        "nim": 4617010059,
-        "nama": "Nadia Ela Sakina ",
-        "kelas": "TI 5A",
-        "Matkul": "WEB 2",
-        "jurusan": "TIK"
-    },
-    {
-        "nim": 4617010011,
-        "nama": "Nur Aminah",
-        "kelas": "TI 5A",
-        "Matkul": "WEB 2",
-        "jurusan": "TIK"
-    },
-    {
-        "nim": 4617010021,
-        "nama": "Ramona Matovani",
-        "kelas": "TI 5A",
-        "Matkul": "WEB 2",
-        "jurusan": "TIK"
+        "nama": "Kontak Kami:",
+        "email": "kamubisa@gmail.com",
+        "no_hp": "081378444327",
+        "alamat_kantor": "Kosan Wulan Akbar, Gang Swadaya No 112, Beji Timur Depok 16442"
     }
 ]

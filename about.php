@@ -1,37 +1,27 @@
 <?php
-// Data 1
-$about [] = array(
+
+
+//data 1
+$anggota [] = array(
+    'nama'      => 'Kontak Kami:',
+    'email'     => 'kamubisa@gmail.com',
+    'no_hp'     => '081378444327',
+    'alamat_kantor' => 'Kosan Wulan Akbar, Gang Swadaya No 112, Beji Timur Depok 16442');
     
-    'nim'    => 4617010059,
-    'nama'   => 'Nadia Ela Sakina ',
-    'kelas' => 'TI 5A',
-    'Matkul' => 'WEB 2',
-    'jurusan' => 'TIK'
-);
 
-// Data 2
-$about [] = array(
+//mengencode data menjadi json
+$jsonfile = json_encode($anggota, JSON_PRETTY_PRINT);
 
-    'nim'    => 4617010011,
-    'nama'   => 'Nur Aminah',
-    'kelas' => 'TI 5A',
-    'Matkul' => 'WEB 2',
-    'jurusan' => 'TIK'
-  
-);
-
-// Data 3
-$about [] = array(
-  
-    'nim'    => 4617010021,
-    'nama'   => 'Ramona Matovani',
-    'kelas' => 'TI 5A',
-    'Matkul' => 'WEB 2',
-    'jurusan' => 'TIK'
-);
-
-// Mengencode mswh menjadi json
-$jsonfile = json_encode($about, JSON_PRETTY_PRINT);
-
-// Menyimpan msh ke dalam anggota.json
+//menyimpan data ke dalam anggota.json
 file_put_contents('anggota.json', $jsonfile);
+
+echo "Data dibuat";
+
+
+
+
+
+
+
+
+?>

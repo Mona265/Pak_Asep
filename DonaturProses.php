@@ -12,3 +12,5 @@ mysqli_query ($koneksi,"insert into tb_donatur(nama,jumlah_donasi, ) values ('$n
 header("location:donasi.php");
 
  ?> 
+
+ 
