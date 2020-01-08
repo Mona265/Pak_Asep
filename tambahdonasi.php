@@ -1,3 +1,9 @@
+<?php
+include 'koneksi.php';
+session_start();
+$username = $_SESSION['user'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,19 +20,21 @@
   <h2>Tambah Data Donasi</h2>
   <form method="post" action="insertdonasi.php">
 
-  <div class="form-group">
-      <label for="nama">Nama :</label>
-      <input type="text" class="form-control" placeholder="Masukan nama" name="nama">
+    <fieldset disabled>
+      <div class="form-group">
+        <label for="nama">Nama :</label>
+        <input type="text" class="form-control" value="<?php echo $_SESSION["username"]; ?>" disable name="nama">
+      </div>
+    </fieldset>
+
+     <div class="form-group">
+      <label for="nama">Nama Penerima Donasi :</label>
+      <input type="text" class="form-control" placeholder="contoh : Panti Asuhan Barokah" name="penerima_donasi">
     </div>
 
      <div class="form-group">
-      <label for="nama">Nama Penerima :</label>
-      <input type="text" class="form-control" placeholder="Masukan nama" name="penerima_donasi">
-    </div>
-
-     <div class="form-group">
-      <label for="nama">Jumlah Dana Yang DIbutuhkan :</label>
-      <input type="text" class="form-control" placeholder="Masukan nama" name="total_dana">
+      <label for="nama">Jumlah Dana Yang Dibutuhkan :</label>
+      <input type="text" class="form-control" placeholder="contoh : 1000000 " name="total_dana">
     </div>
 
 
@@ -36,10 +44,12 @@
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="deskripsi"></textarea>
   </div>
 
-   <div class="form-group">
-      <label for="nama">Dana Terkumpul :</label>
-      <input type="text" class="form-control" placeholder="Masukan nama" name="dana_terkumpul">
-    </div>
+   <fieldset disabled>
+      <div class="form-group">
+        <label for="nama">Dana Terkumpul :</label>
+        <input type="text" class="form-control" disable name="dana_terkumpul">
+      </div>
+    </fieldset>
 
   <button type="submit"onclick="return confirm('Simpan Data?');">Tambah</button>
   <form action="tampildata.php">
