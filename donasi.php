@@ -32,8 +32,6 @@ include 'koneksi.php';
  
     <h2>Daftar Donasi</h2>
     
-    <hr>
-    
     <table class="table table-striped table-hover table-sm table-bordered">
      <div class="col-md-2"></div>
       <thead class="thead-dark">
@@ -48,14 +46,16 @@ include 'koneksi.php';
         </tr>
       </thead>
       </div>
-
-
       <tbody>
+
+  
+
        
 <?php
     include 'koneksi.php';
     $nomer = 1;
     $data = mysqli_query($koneksi,"select * from tb_donasi");
+    $coba = mysqli_query($koneksi,"SELECT SUM(jumlah_donasi) FROM tb_donator");
     while ($d = mysqli_fetch_array($data)) {
         ?>
         <tr>
@@ -67,6 +67,7 @@ include 'koneksi.php';
             <td><?php echo $d['dana_terkumpul']; ?></td>
             
             <td>
+
                 <a href="editdonasi.php?id=<?php echo $d['id']; ?>">EDIT</a>
                 <a href="delete.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Hapus Data?');">HAPUS</a>
             </td>

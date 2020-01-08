@@ -12,7 +12,12 @@
 
 <div class="container">
   <h2>Form Data Donatur</h2>
-  <form method="post" action="insertdonasi.php">
+  <form method="post" action="DonaturProses.php">
+
+  <div class="form-group">
+      <label for="nama">Id Donasi:</label>
+      <input type="text" class="form-control" placeholder="Masukan jumlah donasi" name="id">
+    </div>
 
   <div class="form-group">
       <label for="nama">Nama :</label>

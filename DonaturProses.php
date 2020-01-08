@@ -7,8 +7,9 @@ $jumlah_donasi = $_POST['jumlah_donasi'];
 
 
 
-mysqli_query ($koneksi,"insert into tb_donatur(nama,jumlah_donasi, ) values ('$nama','$jumlah_donasi')");
+mysqli_query ($koneksi,"insert into tb_donatur(id, nama, jumlah_donasi) values ('$id','$nama','$jumlah_donasi')");
 
 header("location:donasi.php");
 
  ?> 
+
