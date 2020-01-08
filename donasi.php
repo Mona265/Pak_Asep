@@ -111,6 +111,28 @@ session_start();
 
       <tbody>
     </table>
+
+    <table class="table table-striped table-hover table-sm table-bordered">
+     <div class="col-md-2"></div>
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" width="20">Id Donasi</th>
+          <th scope="col" width="20">Total</th>
+        </tr>
+      </thead>
+      </div>
+      <tbody>
+        <?php
+          include 'koneksi.php';
+          $coba = mysqli_query($koneksi,"SELECT id, SUM(jumlah_donasi) FROM tb_donatur Where id = '$id'");
+          while ($d = mysqli_fetch_array($coba)){?>
+            <tr>
+              <td><?php echo $d['id']; ?></td>
+            <td><?php echo $d['SUM(jumlah_donasi)']; ?></td>
+            </tr>
+            
+        <?php   }  ?>
+      </tbody>
     </div>
 
    
