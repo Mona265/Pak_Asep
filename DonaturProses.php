@@ -2,16 +2,26 @@
 // koneksi ke database
 include 'koneksi.php';
 session_start();
-$username = $_SESSION['user'];
 $jumlah_donasi = $_POST['jumlah_donasi'];
+$id = $_POST['id'];
+
+$_SESSION['id'] = $id;
+$username = $_SESSION['user'];
+
+$sql1 = "insert into tb_donatur(id, nama, jumlah_donasi) values ('$id','$username','$jumlah_donasi')";
+$sql2 = "update tb_donasi set dana_terkumpul ='$jumlah_donasi' where id = '$id'";
 
 
+mysqli_query($koneksi, $sql1);
+mysqli_query($koneksi, $sql2);
 
-mysqli_query ($koneksi,"insert into tb_donatur(id, nama, jumlah_donasi) values ('$id','$nama','$jumlah_donasi')");
-mysqli_query ($koneksi,"insert into tb_donatur(nama,jumlah_donasi, ) values ('$username','$jumlah_donasi')");
-mysqli_query ($koneksi,"insert into tb_donasi($dana_terkumpul) values ('$jumlah_donasi')");
 
-header("location:donasi.php");
+// $q = mysqli_multi_query($koneksi, $query);
+// if ($q) {
+//   echo "Success";
+// }
+
+header("location:prosesSum.php");
 
  ?> 
 

@@ -41,16 +41,17 @@ while ($d = mysqli_fetch_array($data)) {
       <input type="text" class="form-control" placeholder="Masukan Jumlah Dana" name="total_dana" value="<?php echo $d['total_dana']; ?>">
     </div>
 
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Deskripsi :</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="deskripsi"><?php echo $d['deskripsi']; ?></textarea>
-  </div>
-
    <div class="form-group">
       <label for="nama">Dana Terkumpul :</label>
       <input type="number" class="form-control" placeholder="Masukan nama" name="dana_terkumpul" value="<?php echo $d['dana_terkumpul']; ?>">
       <input type="text" class="form-control" placeholder="Dana Terkumpul" name="dana_terkumpul" value="<?php echo $d['dana_terkumpul']; ?>">
     </div>
+
+    <div class="form-group">
+    <label for="exampleFormControlTextarea1">Deskripsi :</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="deskripsi"><?php echo $d['deskripsi']; ?></textarea>
+  </div>
+
 
    
   <button type="submit"onclick="return confirm('Simpan Data?');">Simpan</button>
