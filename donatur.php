@@ -1,3 +1,9 @@
+<?php 
+include 'koneksi.php';
+session_start();
+$username = $_SESSION['user'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,17 +18,24 @@
 
 <div class="container">
   <h2>Form Data Donatur</h2>
-  <form method="post" action="insertdonasi.php">
+  <form method="post" action="DonaturProses.php">
 
   <div class="form-group">
-      <label for="nama">Nama :</label>
-      <input type="text" class="form-control" placeholder="Masukan nama" name="nama">
+      <label for="nama">Id Donasi:</label>
+      <input type="text" class="form-control" placeholder="Masukan jumlah donasi" name="id">
     </div>
 
-     <div class="form-group">
-      <label for="nama">Jumlah Donasi :</label>
-      <input type="text" class="form-control" placeholder="Masukan jumlah donasi" name="jumlah_donasi">
+  <fieldset disabled>
+    <div class="form-group">
+      <label for="nama">Nama :</label>
+      <input type="text" class="form-control" value="<?php echo $_SESSION["username"]; ?>" disable name="nama">
     </div>
+  </fieldset>
+
+  <div class="form-group">
+    <label for="nama">Jumlah Donasi :</label>
+    <input type="text" class="form-control" placeholder="Masukan jumlah donasi" name="jumlah_donasi">
+  </div>
 
 
   <button type="submit"onclick="return confirm('Simpan Data?');">Simpan</button>

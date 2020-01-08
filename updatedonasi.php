@@ -10,7 +10,7 @@ $deskripsi = $_POST['deskripsi'];
 $dana_terkumpul = $_POST['dana_terkumpul'];
 
 
-mysqli_query ($koneksi,"update tb_donasi set nama = '$nama', penerima_donasi = '$penerima_donasi', total_dana = '$total_dana', deskripsi = '$deskripsi', dana_terkumpul = $dana_terkumpul' where id = '$id'");
+mysqli_query ($koneksi,"update tb_donasi set nama = '$nama', penerima_donasi = '$penerima_donasi', total_dana = '$total_dana', deskripsi = '$deskripsi', dana_terkumpul = '$dana_terkumpul' where id = '$id'");
 
 header("location:donasi.php");
 

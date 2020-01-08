@@ -1,3 +1,4 @@
+
 <?php
 
 
@@ -16,12 +17,4 @@ $jsonfile = json_encode($anggota, JSON_PRETTY_PRINT);
 file_put_contents('anggota.json', $jsonfile);
 
 echo "Data dibuat";
-
-
-
-
-
-
-
-
 ?>

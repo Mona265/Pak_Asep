@@ -1,12 +1,40 @@
 <?php
-
 include 'koneksi.php';
+session_start();
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Kamubisa.com</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->  
+    <link rel="icon" type="image/png" href="bootstrap/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/vendor/animate/animate.css">
+<!--===============================================================================================-->  
+    <link rel="stylesheet" type="text/css" href="bootstrap/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/vendor/select2/select2.min.css">
+<!--===============================================================================================-->  
+    <link rel="stylesheet" type="text/css" href="bootstrap/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/util.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/main.css">
+<!--===============================================================================================-->
   
 </head>
 <body>
@@ -20,19 +48,21 @@ include 'koneksi.php';
        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
               <ul class="nav navbar-nav menu_nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li> 
-                <li class="nav-item"><a class="nav-link" href="tambahdonasi.php">Tambah</a></li> 
+                <li class="nav-item"><a class="nav-link" href="tambahdonasi.php">Tambah</a></li>
+                <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>  
             </div>
     </div>
   </nav>
-  
+
+
   <div class="container" >
   <div class="row" style="margin-top: 20px"></div>
   <div class="col-md-2"></div>
   <div class="col-md-14">
  
     <h2>Daftar Donasi</h2>
-    
-    <hr>
+  <h1><?php00=@$_SESSION['nama_user'];?></h1>
+
     
     <table class="table table-striped table-hover table-sm table-bordered">
      <div class="col-md-2"></div>
@@ -48,14 +78,16 @@ include 'koneksi.php';
         </tr>
       </thead>
       </div>
-
-
       <tbody>
+
+  
+
        
 <?php
     include 'koneksi.php';
     $nomer = 1;
     $data = mysqli_query($koneksi,"select * from tb_donasi");
+    $coba = mysqli_query($koneksi,"SELECT SUM(jumlah_donasi) FROM tb_donator");
     while ($d = mysqli_fetch_array($data)) {
         ?>
         <tr>
@@ -67,8 +99,10 @@ include 'koneksi.php';
             <td><?php echo $d['dana_terkumpul']; ?></td>
             
             <td>
+
                 <a href="editdonasi.php?id=<?php echo $d['id']; ?>">EDIT</a>
                 <a href="delete.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Hapus Data?');">HAPUS</a>
+                <a href="donatur.php">Donasi</a>
             </td>
         </tr>
         <?php
@@ -78,8 +112,8 @@ include 'koneksi.php';
       <tbody>
     </table>
     </div>
-  </div>
 
+   
   
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
